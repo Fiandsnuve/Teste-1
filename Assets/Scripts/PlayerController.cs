@@ -4,7 +4,9 @@ using System.Collections;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour {
 
-	public float MoveSpeed;
+    [Tooltip("What joystick to use.")]
+    public Joystick _Joystick;
+    public float MoveSpeed;
 	public float RotationSpeed;
 	CharacterController cc;
 	private Animator anim;
@@ -23,10 +25,30 @@ public class PlayerController : MonoBehaviour {
 
 	void Update()
 	{
-		Vector3 move = Input.GetAxis ("Vertical") * transform.TransformDirection (Vector3.forward) * MoveSpeed;
-		transform.Rotate (new Vector3 (0, Input.GetAxis ("Horizontal") * RotationSpeed * Time.deltaTime, 0));
-		
-		if (!cc.isGrounded) {
+        Vector3 move;
+        if (_Joystick.JoystickInput.y != 0)
+        {
+            move = _Joystick.JoystickInput.y * transform.TransformDirection(Vector3.forward) * MoveSpeed;
+        }
+        else
+        //if (Input.GetAxis("Vertical") != 0)
+        {
+            move = Input.GetAxis("Vertical") * transform.TransformDirection(Vector3.forward) * MoveSpeed;
+        }
+
+        
+        if (_Joystick.JoystickInput.x != 0)
+        {
+            transform.Rotate(new Vector3(0, _Joystick.JoystickInput.x * RotationSpeed * Time.deltaTime, 0));
+        }
+        else
+        //if (Input.GetAxis("Horizontal") != 0)
+        {
+            transform.Rotate(new Vector3(0, Input.GetAxis("Horizontal") * RotationSpeed * Time.deltaTime, 0));
+        }
+        
+
+        if (!cc.isGrounded) {
 			gravidade += Physics.gravity * Time.deltaTime;
 		} 
 		else 
