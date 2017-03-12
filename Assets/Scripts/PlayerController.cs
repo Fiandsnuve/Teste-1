@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 [RequireComponent(typeof(CharacterController))]
@@ -6,6 +7,7 @@ public class PlayerController : MonoBehaviour {
 
     [Tooltip("What joystick to use.")]
     public Joystick _Joystick;
+    public bool JumpB = false;
     public float MoveSpeed;
 	public float RotationSpeed;
 	CharacterController cc;
@@ -63,25 +65,36 @@ public class PlayerController : MonoBehaviour {
 		move += gravidade;
 		cc.Move (move* Time.deltaTime);
 		Anima ();
-	}
+    }
 	 
 	void Anima()
 	{
+        /*
 		if (!Input.anyKey)
 		{
 			anim.SetTrigger("Parado");
 		} 
 		else 
+		{*/
+		if(Input.GetKeyDown("space") || JumpB)
 		{
-			if(Input.GetKeyDown("space"))
-			{
-				anim.SetTrigger("Pula");
-				jump = true;
-			}
-			else
-			{
-				anim.SetTrigger("Corre");
-			}
-		}
+			anim.SetTrigger("Pula");
+			jump = true;
+            JumpB = false;
+        }
+		else if(Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") == 0 && _Joystick.JoystickInput.x == 0 && _Joystick.JoystickInput.y == 0)
+        {
+            anim.SetTrigger("Parado");
+        }
+        else
+        {
+			anim.SetTrigger("Corre");
+	    }
+		//}
 	}
+
+    public void JumpBActivate()
+    {
+        JumpB = true;
+    }
 }
