@@ -1,0 +1,33 @@
+Initialize engine version: 5.1.1f1 (2046fc06d4d8)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 650 Ti (ID=0x11c6)
+    Vendor:   NVIDIA
+    VRAM:     994 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: F:\atalhos\Senac\Modulo 2\UC 6\Atividade 1\AlienCity3D_Fase5\AlienCity3D_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading F:\atalhos\Senac\Modulo 2\UC 6\Atividade 1\AlienCity3D_Fase5\AlienCity3D_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: F:\atalhos\Senac\Modulo 2\UC 6\Atividade 1\AlienCity3D_Fase5\AlienCity3D_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading F:\atalhos\Senac\Modulo 2\UC 6\Atividade 1\AlienCity3D_Fase5\AlienCity3D_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: F:\atalhos\Senac\Modulo 2\UC 6\Atividade 1\AlienCity3D_Fase5\AlienCity3D_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading F:\atalhos\Senac\Modulo 2\UC 6\Atividade 1\AlienCity3D_Fase5\AlienCity3D_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: F:\atalhos\Senac\Modulo 2\UC 6\Atividade 1\AlienCity3D_Fase5\AlienCity3D_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading F:\atalhos\Senac\Modulo 2\UC 6\Atividade 1\AlienCity3D_Fase5\AlienCity3D_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: F:\atalhos\Senac\Modulo 2\UC 6\Atividade 1\AlienCity3D_Fase5\AlienCity3D_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading F:\atalhos\Senac\Modulo 2\UC 6\Atividade 1\AlienCity3D_Fase5\AlienCity3D_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.084 seconds
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: F:\atalhos\Senac\Modulo 2\UC 6\Atividade 1\AlienCity3D_Fase5\AlienCity3D_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: F:\atalhos\Senac\Modulo 2\UC 6\Atividade 1\AlienCity3D_Fase5\AlienCity3D_Data\Managed\System.dll (this message is harmless)
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 30e4 -> priority: 1 
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.364688 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 144.
+Total: 0.140948 ms (FindLiveObjects: 0.011631 ms CreateObjectMapping: 0.019158 ms MarkObjects: 0.101264 ms  DeleteObjects: 0.008552 ms)
+
