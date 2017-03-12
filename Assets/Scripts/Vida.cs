@@ -12,7 +12,10 @@ public class Vida : MonoBehaviour {
 	void Update () {
 		vidaUI.fillAmount = vida/100;
 		if (vida <= 0 || transform.position.y < -10f) {
-			vida = 100;
+            #if UNITY_ANDROID
+            Handheld.Vibrate();
+            #endif
+            vida = 100;
 			gameObject.transform.position = spawn;
 		}
 	}

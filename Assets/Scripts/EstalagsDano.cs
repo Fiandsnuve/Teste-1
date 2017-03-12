@@ -8,7 +8,10 @@ public class EstalagsDano : MonoBehaviour {
 		if(other.gameObject.GetComponent<Vida>() != null)
 		{
 			other.gameObject.GetComponent<Vida> ().vida -= 20;
-		}
-	}
+            #if UNITY_ANDROID
+            Handheld.Vibrate();
+            #endif
+        }
+    }
 
 }
